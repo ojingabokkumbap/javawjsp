@@ -9,4 +9,28 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+    	<servlet>
+    	
+    		<servlet-name>test2</servlet-name>
+    		<servlet-class>j1111.Test2</servlet-class>
+    	</servlet>
+    	<servlet-mapping>
+    		<servlet-name>test2</servlet-name>
+    		<url-pattern>/t2</url-pattern>
+    	</servlet-mapping>
+    	
+    	<!-- controller 호출 -->
+    	<servlet>
+    	<!-- 이름이 test12 -->
+    		<servlet-name>test12</servlet-name>
+    	<!-- class가 j1111.test12 경로에 있다 -->    		
+    		<servlet-class>j1111.Test12</servlet-class>
+    	</servlet>
+    	<servlet-mapping>
+    		<!-- test12로 별명 설정 -->
+    		<servlet-name>test12</servlet-name>
+    		<!-- url패턴 으로 부르기 -->
+    		<url-pattern>/test12ok</url-pattern>
+    	</servlet-mapping>
+    	
 </web-app>

@@ -1,6 +1,7 @@
 package j1111;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -30,5 +31,7 @@ public class Test11OK extends HttpServlet {
 		for(String hobby : hobbys) {
 			System.out.print(hobby + "/");
 		}
+		
+
 	}
 }

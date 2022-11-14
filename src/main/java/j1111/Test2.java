@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/T2")
+//@WebServlet("/T2")
 public class Test2 extends HttpServlet {
 //   //doget dopost
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
