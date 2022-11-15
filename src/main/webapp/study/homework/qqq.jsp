@@ -111,6 +111,6 @@
         </div>
       </form>
     </fieldset>
-    <div>
+   </div>
 </body>
 </html>

@@ -1,12 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-		<meta charset="UTF-8">
-		<title>title</title>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
+<!-- input.jsp -->
   <script>
     'use strict';
     let addTbl;
@@ -21,10 +14,10 @@
 
       // 앞에서 삽입시켜놓은 셀에 추가될 테이블의 내용을 기록해 준다.
       let formTag = "";
-      formTag += ' 상품명 <input type="text" name="proname" style="width:60px; height:20px; "/>';
+      formTag += ' 상품명 <input type="text" name="product" style="width:60px; height:20px; "/>';
       formTag += ' 가격 <input type="text" name="price" style="width:60px; height:20px; " onblur="formCalc();">';
       formTag += ' 수량 <input type="text" name="su"style="width:60px; height:20px;"/>';
-      formTag += '<input type="button" value="삭제" onclick="removeRow()" class="ml-3 btn btn-warning"/>';
+      formTag += '<input type="button" value="삭제" onclick="removeRow()" class="ml-3 btn btn-warning btn-sm"/>';
       addCell.innerHTML = formTag;
     }
     
@@ -34,52 +27,48 @@
     }
     
 	function fCheck() {
-		let proname = document.getElementById("proname").value;
+		let proname = document.getElementById("product").value;
 		
 		if(proname == ""){
 			alert("첫번째 상품을 등록하세요")
-			document.getElementById("proname").focus();
+			document.getElementById("product").focus();
 		}
 		else{
 			myform.submit();
 		}
 	}
-    
-    
    </script>
-<body>
-<p><br/></p>
-<div class="container">
-	<form name="myform" method="post" action="<%=request.getContextPath() %>/homework_BuyingOK">
-	<div>
-	구매자 <input type="text" name="buyer" id="buyer"/>
-	</div>
+   <style>
+    #addTable {
+        margin : 0 auto;
+    }
+    
+    #addTable td {
+      margin : 0 auto;
+        text-align:right;
+    }
+    
+    h2{
+        text-align:center;
+    }
+    
+    input[type="text"]{
+        text-align:right;
+    }
+	</style>
+<div class="container text-center" >
+	<h2>상품등록</h2>
+	<form name="myform" method="post" action="<%=request.getContextPath() %>/j1116h_InPut">
 	<div>
 	<br/>
-	상품분류 
-	<select name="job" name="product" id="product" class="form-control">
-    <option value="상품1">상품1</option>
-    <option value="상품2">상품2</option>
-    <option value="상품3">상품3</option>
-    <option value="상품4">상품4</option>
-    <option value="상품5">상품5</option>
-	</select>
-	</div>
 	<table>
-      <tr>
-        <td>
-        <br/>
-          <input type="button" value="상품추가하기" onclick="insRow()" class="btn btn-success"/>
-        <br/>  
-        </td>
-      </tr>
       <tr>
         <td>
         <br/>
           <table id="addTable" width="400px">
             <tr>
               <td>
-                상품명 <input type="text" name="proname" id="proname" style="width:60px; height:20px; "/>
+                상품명 <input type="text" name="product" id="product" style="width:60px; height:20px; "/>
                 가격 <input type="text" name="price" style="width:60px; height:20px; " onblur="formCalc();"/>
                 수량 <input type="text" name="su"style="width:60px; height:20px;"/>
               </td>
@@ -92,10 +81,11 @@
     <table width="400px">
       <tr>
         <td style="width:100px;">
+          <input type="button" value="상품추가하기" onclick="insRow()" class="btn btn-success"/>
           <input type="button" value="상품등록하기" onclick="fCheck()" class="btn btn-primary"/>
         </td>
-      </tr>
     </table>
+		</div>
 	</form>
 </div>
 <p><br/></p>

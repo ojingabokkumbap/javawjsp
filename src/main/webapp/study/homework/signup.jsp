@@ -25,27 +25,29 @@
 <body>
 <p><br/></p>
 <div class="container">
+  <fieldset>
     <form name="myform" method="post" action="signupOK.jsp">
-        <fieldset>
-                <legend>회원 가입</legend>
-                <ul>
-                    성 명 : <input type="text" name="name" placeholder="이 름"/></br></br>
-                    나 이 : <input type="number" name="age" placeholder="나 이" /></br></br>
-                    성 별 : <input type="radio" name="gender" value="남성" checked /> 남성  
-                                <input type="radio" name="gender" value="여성"/> 여성 </br></br>
-                    전 화 : <input type="text" name="number" placehodler="전화번호"/></br></br>
-                    생 일 : <input type="date" name="birth"/></br></br>
-                    좋아하는 음식 : 
-                    <input type="checkbox" name="food" value="곱창"> 곱창
-                    <input type="checkbox" name="food" value="대창"> 대창
-                    <input type="checkbox" name="food" value="막창"> 막창
-                    <input type="checkbox" name="food" value="파전"> 파전
-                    <input type="checkbox" name="food" value="닭갈비"> 닭갈비
-                    </br></br>                    
-                <input type="button" value="김동명바보멍청이진ㅁ짜짜쯩나" onclick="fCheck()" class="btn btn-success form-control"/>
-                </ul>
-        </fieldset>
+        <legend>회원 가입</legend>
+          <ul>
+         		<li>
+              성 명 : <input type="text" name="name" placeholder="이 름"/></br></br>
+              나 이 : <input type="number" name="age" placeholder="나 이" /></br></br>
+              성 별 : <input type="radio" name="gender" value="남성" checked /> 남성  
+                     <input type="radio" name="gender" value="여성"/> 여성 </br></br>
+              전 화 : <input type="text" name="number" placehodler="전화번호"/></br></br>
+              생 일 : <input type="date" name="birth"/></br></br>
+              좋아하는 음식 : 
+              <input type="checkbox" name="food" value="곱창"> 곱창
+              <input type="checkbox" name="food" value="대창"> 대창
+              <input type="checkbox" name="food" value="막창"> 막창
+              <input type="checkbox" name="food" value="파전"> 파전
+              <input type="checkbox" name="food" value="닭갈비"> 닭갈비
+              <br/>                   
+          	<input type="button" value="" onclick="fCheck()" class="btn btn-success form-control"/>
+          	</li>
+          </ul>
     </form>
+  </fieldset>
 </div>
 <p><br/></p>
 </body>
