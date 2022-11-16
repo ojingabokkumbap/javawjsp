@@ -1,4 +1,4 @@
-package j1116h;
+package homework;
 
 public class sukVO {
 	String product;
