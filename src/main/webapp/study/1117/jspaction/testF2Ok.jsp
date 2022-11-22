@@ -13,7 +13,7 @@
 
 <!-- java class(VO)를 사용하여 넘어온 값들을 저장하고자 한다. -->
 <!-- 자바클래스는 jsp액션태그 (jsp:useBean)를 사용한다.-->
-<jsp:useBean id="vo" class="j1117.Test1VO"/>
+<jsp:useBean id="vo" class="study.j1117.Test1VO"/>
 <!-- 생선된 클래스에 값을 넣을 때 : jsp:setProperty태그사용 -->
 <!-- 생선된 클래스에 값을 꺼낼 때 : jsp:getProperty태그사용 -->
 

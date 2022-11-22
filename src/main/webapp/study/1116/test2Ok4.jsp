@@ -1,4 +1,4 @@
-0<%@page import="j1116.Test2VO"%>
+0<%@page import="study.j1116.Test2VO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!--request.setAttribute("vo", vo); //저장소에 담은 내용  -->
 <%
