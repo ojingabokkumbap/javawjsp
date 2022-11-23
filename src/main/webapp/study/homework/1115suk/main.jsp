@@ -59,7 +59,7 @@
   	<%@ include file="input.jsp" %>
   	<!-- < % @ : directive(지시자) -->
  <%} else if(sw.equals("proview")){	 %>
-  	<%@ include file="proview.jsp" %>
+  	<%-- <%@ include file="proview.jsp" %> --%>
 		<!-- include jsp action tag -->
  
  <%} else { %>
