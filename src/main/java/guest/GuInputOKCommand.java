@@ -1,6 +1,7 @@
 package guest;
 
 import java.io.IOException;
+import java.util.regex.Pattern;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -16,12 +17,23 @@ public class GuInputOKCommand implements GuestInterface {
 		String content = request.getParameter("content") == null ? "" : request.getParameter("content");
 		String hostIp = request.getParameter("hostIp") == null ? "" : request.getParameter("hostIp");
 		
+    
 		// 성명에는 태그 사용 금지 
 		name = name.replace("<","&lt;");
 		name = name.replace(">","&gt;");
 		
 		GuestVO vo = new GuestVO();
 		GuestDAO dao = new GuestDAO();
+		
+		// 이메일 유효성 검사
+		String regEmail = "^([a-z0-9_\\.-]+)@([\\da-z\\.-]+)\\.([a-z\\.]{2,6})$";
+		
+		if(Pattern.matches(regEmail, email)) {
+			vo.setEmail(email);
+		}
+		else {
+			vo.setEmail("");
+		}
 		
 		//vo에 담기
 		vo.setName(name);
