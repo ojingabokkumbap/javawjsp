@@ -19,7 +19,6 @@
   <h1>쿵이</h1>
   <p>(본 페이지는 반응형으로 제작된 JSP 프로젝트입니다.)</p> 
 </div>
-
 <jsp:include page="include/nav.jsp"></jsp:include>
 <div class="container" style="margin-top:30px">
   <div class="row">

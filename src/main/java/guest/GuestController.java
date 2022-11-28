@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import member.MemLoginOKCommand;
+import member.MemMainCommand;
+
 @WebServlet("*.gu")
 public class GuestController extends HttpServlet{
 	@Override
@@ -33,7 +36,6 @@ public class GuestController extends HttpServlet{
 		else if(com.equals("/guInputOK")) {
 			command = new GuInputOKCommand();
 			command.execute(request, response);
-			//input에 작성한 결과를 포함한 guList를 보기 위해 guListController로 보내야 함
 			viewPage = "/include/message.jsp";
 		}
 		else if(com.equals("/adminLogin")) {
